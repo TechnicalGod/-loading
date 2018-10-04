@@ -1,0 +1,17 @@
+<view>
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>
+</view>
+
+<view class='container_wrap'>
+  <scroll-view style="height:{{clientHeight}}px;" class='container_wrap' scroll-y="true" bindscroll="scroll">
+    <view class='listview'>
+    <view class='thumbnail' wx:for="{{productArr}}" wx:key="productlist" style="{arr[index] ? 'background:none;background:#fff' : '' '}">
+   
+      <image class="product_image {{arr[index] ? 'loaded' : ''}}" src="{{arr[index] ? productArr[index].image_url : ''}}">
+      </image>
+    </view>
+    </view>
+  </scroll-view>
+</view>
